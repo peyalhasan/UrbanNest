@@ -7,7 +7,8 @@
         "rating": 4.5,
         "stock": 120,
         "image": "https://images.unsplash.com/photo-1580894732444-8ecded7900cd",
-        "description": "High-quality over-ear wireless headphones with deep bass and noise cancellation."
+        "description": "High-quality over-ear wireless headphones with deep bass and noise cancellation.",
+        "cart-quantity": 0
     },
     {
         "id": 2,
@@ -17,7 +18,8 @@
         "rating": 4.8,
         "stock": 45,
         "image": "https://profine.pk/wp-content/uploads/2024/12/WhatsApp-Image-2025-03-06-at-2.06.38-PM-1.webp",
-        "description": "Comfortable and adjustable office chair designed for long working hours."
+        "description": "Comfortable and adjustable office chair designed for long working hours.",
+        "cart-quantity": 0
     },
     {
         "id": 3,
@@ -27,7 +29,8 @@
         "rating": 4.6,
         "stock": 30,
         "image": "https://vision.com.bd/images/detailed/172/0678706_vision-43-led-tv-e40z-smart-fhd-google-tv.webp",
-        "description": "Full HD Smart LED TV with built-in apps and voice control compatibility."
+        "description": "Full HD Smart LED TV with built-in apps and voice control compatibility.",
+        "cart-quantity": 0
     },
     {
         "id": 4,
@@ -37,7 +40,8 @@
         "rating": 4.3,
         "stock": 80,
         "image": "https://images.unsplash.com/photo-1542291026-7eec264c27ff",
-        "description": "Lightweight and breathable running sneakers suitable for everyday workouts."
+        "description": "Lightweight and breathable running sneakers suitable for everyday workouts.",
+        "cart-quantity": 0
     },
     {
         "id": 5,
@@ -47,7 +51,8 @@
         "rating": 4.2,
         "stock": 200,
         "image": "https://sumeetcookware.in/cdn/shop/products/41QPhzRdWzL.jpg?v=1709102321",
-        "description": "Double-wall insulated bottle keeps your drinks hot or cold for up to 12 hours."
+        "description": "Double-wall insulated bottle keeps your drinks hot or cold for up to 12 hours.",
+        "cart-quantity": 0
     },
     {
         "id": 6,
@@ -57,7 +62,8 @@
         "rating": 4.9,
         "stock": 15,
         "image": "https://images.unsplash.com/photo-1517336714731-489689fd1ca8",
-        "description": "Powerful gaming laptop with RTX graphics, 16GB RAM, and 1TB SSD storage."
+        "description": "Powerful gaming laptop with RTX graphics, 16GB RAM, and 1TB SSD storage.",
+        "cart-quantity": 0
     },
     {
         "id": 7,
@@ -67,7 +73,8 @@
         "rating": 4.7,
         "stock": 60,
         "image": "https://images.unsplash.com/photo-1516574187841-cb9cc2ca948b",
-        "description": "Stylish smartwatch with health tracking, GPS, and water resistance up to 50 meters."
+        "description": "Stylish smartwatch with health tracking, GPS, and water resistance up to 50 meters.",
+        "cart-quantity": 0
     },
     {
         "id": 8,
@@ -77,7 +84,8 @@
         "rating": 4.6,
         "stock": 100,
         "image": "https://images.unsplash.com/photo-1593642634367-d91a135587b5",
-        "description": "RGB backlit mechanical keyboard with blue switches for a responsive typing experience."
+        "description": "RGB backlit mechanical keyboard with blue switches for a responsive typing experience.",
+        "cart-quantity": 0
     },
     {
         "id": 9,
@@ -87,7 +95,8 @@
         "rating": 4.4,
         "stock": 150,
         "image": "https://cdn.thewirecutter.com/wp-content/media/2024/11/portablebluetoothspeakers-2048px-9130.jpg?auto=webp&quality=75&width=1024",
-        "description": "Compact waterproof speaker with deep sound and 12-hour playtime."
+        "description": "Compact waterproof speaker with deep sound and 12-hour playtime.",
+        "cart-quantity": 0
     },
     {
         "id": 10,
@@ -97,7 +106,8 @@
         "rating": 4.3,
         "stock": 250,
         "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQNtoIn9XNA33pZgyGSyr_zAiwQ1wmDjB4YSw&s",
-        "description": "Minimalist genuine leather wallet with 6 card slots and a cash compartment."
+        "description": "Minimalist genuine leather wallet with 6 card slots and a cash compartment.",
+        "cart-quantity": 0
     },
     {
         "id": 11,
@@ -107,7 +117,8 @@
         "rating": 4.5,
         "stock": 75,
         "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-O_U1MWeIhU3ZbOSKzSqpKwC4fNcGs6tt8w&s",
-        "description": "Scandinavian-style wooden desk lamp with warm LED lighting and modern aesthetics."
+        "description": "Scandinavian-style wooden desk lamp with warm LED lighting and modern aesthetics.",
+        "cart-quantity": 0
     },
     {
         "id": 12,
@@ -117,6 +128,7 @@
         "rating": 4.8,
         "stock": 55,
         "image": "https://fixthephoto.com/images/content/cyber-acoustics-cvl-2230-noise-cancelling-microphone.png",
-        "description": "Professional-grade microphone with active noise cancellation and USB connectivity."
+        "description": "Professional-grade microphone with active noise cancellation and USB connectivity.",
+        "cart-quantity": 0
     }
 ]
