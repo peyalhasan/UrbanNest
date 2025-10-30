@@ -8,9 +8,7 @@ function App() {
 
 
   const [carts, setCarts] = useState([]);
-
   
-
   const handleUpdateCart = (product)=>{
     const exist = carts.find(item => item.id === product.id)
     if(exist){
