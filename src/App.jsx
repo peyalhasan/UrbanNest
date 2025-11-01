@@ -42,7 +42,6 @@ function App() {
         })
         // Add product to cart with quantity 1 and reduce stock
        return [...prev, { ...product, cart_quantity: 1, stock: product.stock - 1, unitPrice: product.price, price: product.price }]
-
         
       }
     })
