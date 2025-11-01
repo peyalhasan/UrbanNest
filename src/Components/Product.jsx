@@ -4,7 +4,7 @@ import { MdPriceChange } from "react-icons/md";
 import { FaUncharted } from "react-icons/fa";
 import { FcRating } from "react-icons/fc";
 
-const Product = ({ product , handleUpdateCart}) => {
+const Product = ({ product, handleUpdateCart }) => {
     const { name, category, price, rating, stock, image, description } = product
     return (
         <div>
