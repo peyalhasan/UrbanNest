@@ -6,7 +6,7 @@ import { MdOutlinePlaylistRemove } from "react-icons/md";
 import { MdAddBox } from "react-icons/md";
 import { IoIosRemoveCircle } from "react-icons/io";
 
-export default function Cart({ cart, handleremove }) {
+export default function Cart({ cart, handleremove, add, remove }) {
     const { image, category, price, stock, rating, name, cart_quantity, id
     } = cart;
     return (
@@ -25,8 +25,12 @@ export default function Cart({ cart, handleremove }) {
 
                         </div>
                         <div className="flex text-xl gap-2">
-                            <IoIosRemoveCircle />
-                            <MdAddBox />
+                            <button onClick={() => remove()}>
+                                <IoIosRemoveCircle />
+                            </button>
+                            <button onClick={() => add()}>
+                                <MdAddBox />
+                            </button>
                         </div>
                     </div>
                     <div className="card-actions justify-end">

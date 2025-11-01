@@ -13,7 +13,11 @@ function App() {
 
     const exist = carts.some(item => item.id === product.id);
     if (exist) {
-
+      // Swal.fire({
+      //   title: "Drag me!",
+      //   icon: "success",
+      //   draggable: true
+      // });
       const updatedCart = carts.map(element => element.id ? {
         ...element,
         cart_quantity: element.cart_quantity + 1,
@@ -32,28 +36,7 @@ function App() {
       product.stock = product.stock - 1;
       setCarts(cart => [...cart, product])
     }
-    console.log(product.cart_quantity)
-    if (exist.cart_quantity >= product.stock) {
-      alert("No more stock available");
 
-      return
-    }
-    // const exist = carts.some(item => item.id === product.id)
-    // if (exist) {
-    //   const udpadedCart = carts.map(item => item.id ? {
-    //     ...item,
-    //     cart_quantity: item.cart_quantity + 1,
-    //     price: (item.cart_quantity + 1) * item.price,
-    //     stock: item.stock - 1,
-    //   }
-    //     : item);
-    //   setCarts(udpadedCart)
-    // }
-    // else {
-    //   product.cart_quantity = 1;
-    //   product.stock = product.stock - 1
-    //   setCarts(cart => [...cart, product])
-    // }
   }
 
   const handleremove = (id) => {
@@ -61,17 +44,34 @@ function App() {
     setCarts(remove)
   }
 
-  const add = (product) => {
-    return produ
+  const add = () => {
+    const updatedCart = carts.map(element => element.id ? {
+      ...element,
+      cart_quantity: element.cart_quantity + 1,
+      price: (element.cart_quantity + 1) * element.price,
+      stock: element.stock - 1,
+
+    } : element)
+    setCarts(updatedCart)
   }
 
+  const remove = () => {
+    const updatedCart = carts.map(element => element.id ? {
+      ...element,
+      cart_quantity: element.cart_quantity - 1,
+      price: (element.cart_quantity - 1) * element.price,
+      stock: element.stock + 1,
+
+    } : element)
+    setCarts(updatedCart)
+  }
   return (
     <div className='flex flex-col md:flex-row gap-5 my-8'>
       <div className='md:w-[70%]' >
         <Products handleUpdateCart={handleUpdateCart}  ></Products>
       </div>
       <div className='md:w-[30%]'>
-        <Carts key={carts.id} carts={carts} handleremove={handleremove} ></Carts>
+        <Carts add={add} remove={remove} key={carts.id} carts={carts} handleremove={handleremove} ></Carts>
       </div>
     </div>
   )
