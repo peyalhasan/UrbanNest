@@ -1,17 +1,63 @@
-# React + Vite
+# 🏡 UrbanNest
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**UrbanNest** is a modern e-commerce web app built with **React.js** that allows users to browse, add, and manage products in a shopping cart with real-time price updates.  
+It’s designed with a clean UI, responsive layout, and dynamic product management logic.
 
-Currently, two official plugins are available:
+🔗 **Live Demo:** [urban-nest-puce.vercel.app](https://urban-nest-puce.vercel.app/)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+## 🚀 Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- 🛒 Add and remove items from the cart  
+- 🔢 Auto-updates total price and quantity  
+- 📦 Product stock decreases/increases dynamically  
+- ❌ Automatically removes item when quantity hits `0`  
+- 💰 Real-time total price calculation  
+- 💾 Cart state managed efficiently with React `useState` and `useEffect`  
+- 📱 Responsive design using Tailwind CSS  
+- ⚡ Fast deployment with **Vercel**
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
-# UrbanNest
+## 🧠 Technologies Used
+
+| Category | Tools / Libraries |
+|-----------|-------------------|
+| Frontend | React.js, JSX, Vite |
+| Styling | Tailwind CSS, DaisyUI |
+| Icons | React Icons |
+| Alerts | SweetAlert2 |
+| Deployment | Vercel |
+
+---
+
+## 🧩 Installation & Setup
+
+```bash
+# Clone the repository
+git clone https://github.com/yourusername/UrbanNest.git
+
+# Go into the project folder
+cd UrbanNest
+
+# Install dependencies
+npm install
+
+# Run the development server
+npm run dev
+
+UrbanNest/
+├── src/
+│   ├── Components/
+│   │   ├── Products.jsx
+│   │   ├── Carts.jsx
+│   │   └── Cart.jsx
+│   ├── App.jsx
+│   └── main.jsx
+├── public/
+│   └── UrbanNest.png
+└── package.json
+
+
+---
