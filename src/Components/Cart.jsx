@@ -25,16 +25,16 @@ export default function Cart({ cart, handleremove, add, remove }) {
 
                         </div>
                         <div className="flex text-xl gap-2">
-                            <button onClick={() => remove()}>
+                            <button onClick={() => remove(cart)}>
                                 <IoIosRemoveCircle />
                             </button>
-                            <button onClick={() => add()}>
+                            <button onClick={() => add(cart)}>
                                 <MdAddBox />
                             </button>
                         </div>
                     </div>
                     <div className="card-actions justify-end">
-                        <div className="badge badge-primary flex items-center"> <MdPriceChange />{price} </div>
+                        <div className="badge badge-primary flex items-center"> <MdPriceChange />{price * cart_quantity} </div>
                         <div className="badge badge-secondary"> <FaUncharted /> {stock} </div>
                         <div className="badge badge-neutral"> <FcRating /> {rating} </div>
                     </div>

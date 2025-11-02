@@ -1,5 +1,17 @@
+import { useEffect, useState } from 'react';
 import Cart from './Cart';
+import { MdPriceChange } from "react-icons/md";
+import { MdDiscount } from "react-icons/md";
 const Carts = ({ carts, handleremove, add, remove }) => {
+
+    const[total, settotal] = useState(0);
+    useEffect(()=>{
+        const totalPrice = carts.reduce((acc, current) =>{
+            return acc +=  (current.cart_quantity * current.price)
+        }, 0)
+        settotal(totalPrice)
+    },[carts])
+
     return (
 
         <div>
@@ -7,6 +19,10 @@ const Carts = ({ carts, handleremove, add, remove }) => {
             {
                 carts.map((cart, idx) => <Cart key={idx} handleremove={handleremove} cart={cart} add={add} remove={remove} ></Cart>)
             }
+            <div className='p-3 space-y-3 my-3 '>
+                <h1 className=" flex items-center gap-1 text-xl font-bold badge badge-neutral " >Total Items: <MdDiscount /> {carts.length} </h1>
+                <h1 className=' flex badge badge-primary items-center gap-1 text-xl font-bold'>Total Price: <MdPriceChange /> {total} </h1>
+            </div>
         </div>
     );
 };

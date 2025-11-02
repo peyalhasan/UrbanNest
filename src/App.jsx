@@ -52,26 +52,38 @@ function App() {
     setCarts(remove)
   }
 
-  const add = () => {
+  const add = (cart) => {
     const updatedCart = carts.map(element => element.id ? {
       ...element,
       cart_quantity: element.cart_quantity + 1,
-      price: (element.cart_quantity + 1) * element.price,
       stock: element.stock - 1,
 
     } : element)
+    const targetItem = updatedCart.find(item=> item.id === cart.id);
+    if(targetItem.stock <= 0){
+        Swal.fire({ icon: 'error', title: 'Out of Stock!' })
+        return
+    }
+
     setCarts(updatedCart)
   }
 
-  const remove = () => {
+  const remove = (cart) => {
+
     const updatedCart = carts.map(element => element.id ? {
       ...element,
       cart_quantity: element.cart_quantity - 1,
-      price: (element.cart_quantity - 1) * element.price,
       stock: element.stock + 1,
+     } : element);
 
-    } : element)
-    setCarts(updatedCart)
+    const targetItem = updatedCart.find(item => item.id === cart.id);
+     if(targetItem.cart_quantity <= 0){
+        handleremove(cart.id)
+      }
+      else{
+        setCarts(updatedCart)
+      }
+
   }
 
   return (
