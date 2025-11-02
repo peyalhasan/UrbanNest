@@ -3,8 +3,10 @@ import { FaCartArrowDown } from "react-icons/fa";
 import { MdPriceChange } from "react-icons/md";
 import { FaUncharted } from "react-icons/fa";
 import { FcRating } from "react-icons/fc";
+import { RiShoppingBag2Fill } from "react-icons/ri";
 
-const Product = ({ product, handleUpdateCart }) => {
+
+const Product = ({ product, handleUpdateCart , buyNow }) => {
     const { name, category, price, rating, stock, image, description } = product
     return (
         <div>
@@ -27,7 +29,7 @@ const Product = ({ product, handleUpdateCart }) => {
                     </div>
                     <div className='flex gap-2'>
                         <button onClick={() => handleUpdateCart(product)} className='btn btn-warning'>Add To Cart <FaCartArrowDown /></button>
-                        <button className='btn btn-success'>Buy Now</button>
+                        <button onClick={() => buyNow(product)} className='btn btn-success'> <RiShoppingBag2Fill /> Buy Now</button>
                     </div>
                 </div>
             </div>

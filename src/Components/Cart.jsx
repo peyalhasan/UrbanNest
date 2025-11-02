@@ -5,8 +5,9 @@ import { FcRating } from "react-icons/fc";
 import { MdOutlinePlaylistRemove } from "react-icons/md";
 import { MdAddBox } from "react-icons/md";
 import { IoIosRemoveCircle } from "react-icons/io";
+import { RiShoppingBag2Fill } from "react-icons/ri";
 
-export default function Cart({ cart, handleremove, add, remove }) {
+export default function Cart({ cart, handleremove, add, remove , buyNow }) {
     const { image, category, price, stock, rating, name, cart_quantity, id
     } = cart;
     return (
@@ -38,8 +39,9 @@ export default function Cart({ cart, handleremove, add, remove }) {
                         <div className="badge badge-secondary"> <FaUncharted /> {stock} </div>
                         <div className="badge badge-neutral"> <FcRating /> {rating} </div>
                     </div>
-                    <div>
+                    <div className="flex gap-5 mt-4">
                         <button className="btn btn-error" onClick={() => handleremove(id)} > Remove <span className="text-2xl font-bold "> <MdOutlinePlaylistRemove /></span></button>
+                        <button  onClick={() => buyNow(cart)}  className='btn btn-success'> <RiShoppingBag2Fill /> Buy Now</button>
                     </div>
                 </div>
             </div>

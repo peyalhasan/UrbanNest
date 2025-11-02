@@ -86,13 +86,50 @@ function App() {
 
   }
 
+  const buyNow = (products) =>{
+        const {name} = products
+        const swalWithBootstrapButtons = Swal.mixin({
+          customClass: {
+            confirmButton: "btn btn-success",
+            cancelButton: "btn btn-danger"
+          },
+          buttonsStyling: false
+        });
+        swalWithBootstrapButtons.fire({
+          title: `${name} `,
+          text: "Do you to Purchase this?",
+          icon: "warning",
+          showCancelButton: true,
+          confirmButtonText: "Yes, confirm it 🤖",
+          cancelButtonText: "No, cancel!‼️",
+          reverseButtons: true
+        }).then((result) => {
+          if (result.isConfirmed) {
+            swalWithBootstrapButtons.fire({
+              title: "Confirmed✌️",
+              text: "Your are confirmed it🌸",
+              icon: "success"
+            });
+          } else if (
+            /* Read more about handling dismissals below */
+            result.dismiss === Swal.DismissReason.cancel
+          ) {
+            swalWithBootstrapButtons.fire({
+              title: "Cancelled 🥺",
+              text: "You are cancelled it 😣",
+              icon: "error"
+            });
+          }
+        });
+  }
+
   return (
     <div className='flex flex-col md:flex-row gap-5 my-8'>
       <div className='md:w-[70%]' >
-        <Products handleUpdateCart={handleUpdateCart}  ></Products>
+        <Products handleUpdateCart={handleUpdateCart} buyNow={buyNow}  ></Products>
       </div>
       <div className='md:w-[30%]'>
-        <Carts add={add} remove={remove}  carts={carts} handleremove={handleremove} ></Carts>
+        <Carts add={add} remove={remove}  carts={carts} handleremove={handleremove} buyNow={buyNow} ></Carts>
       </div>
     </div>
   )
